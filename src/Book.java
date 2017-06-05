@@ -1,4 +1,9 @@
-
+/**
+ * Book class is a definition for BookApp class which only has main method 
+ * It helps to instantiate any book object and pricing the book if it is in stock
+ * @author Henok Berhe
+ *
+ */
 public class Book {
 	
 	 private String title;
@@ -14,14 +19,15 @@ public class Book {
 		 this.author=null;
 		 this.description=null;
 		 this.price=0.0;
-		 this.isInStock="yes";
+		 this.isInStock="";
 	 }
 	 
-	public Book(String title, String author, String description) {
+	public Book(String title, String author, String description,String string) {
 		super();
 		this.title = title;
 		this.author = author;
 		this.description = description;
+		this.isInStock=string;
 	}
 
 	public String getTitle() {
@@ -53,6 +59,18 @@ public class Book {
 	}
 	public void setIsInStock(String isInStock) {
 		this.isInStock = isInStock;
+	}
+	public String getPrice(int numberOrdered)
+	{   String Total="";
+		if(this.isInStock.equalsIgnoreCase("instock"))
+		{
+		double tot=numberOrdered*getPrice();
+		 Total = Double.toString(tot);
+		}
+		else {
+			Total= "The book you ordered is out of Stock!";
+		}
+		return Total;
 	}
 	public void getDisplayText()
 	{ 

@@ -13,12 +13,16 @@ public class BookApp {
 		otherBook.setAuthor("Henok Berhe");
 		otherBook.setTitle("Coding Made easy");
 		otherBook.setDescription("Computer Science book for dummies");
+		otherBook.setPrice(22.99);
+		otherBook.getPrice(5);
+		otherBook.setIsInStock("inStock");//the getPrice meethod isenvoked to return the price of five books
+		System.out.println("Your Total for your order of 5 "+otherBook.getTitle()+" "+"Book is:"+" "+otherBook.getPrice(5));
 		otherBook.getDisplayText();
 		newBook.add(otherBook);
 		Book otherBook1 =new Book();
-	otherBook1.setAuthor("Rediet Ayalew");
+	    otherBook1.setAuthor("Rediet Ayalew");
 		otherBook1.setTitle("Coding Made easy");
-	otherBook1.setDescription("Computer Science book for dummies");
+	    otherBook1.setDescription("Computer Science book for dummies");
 		otherBook1.getDisplayText();
 		
 		
